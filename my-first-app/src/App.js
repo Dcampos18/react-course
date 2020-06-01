@@ -7,6 +7,7 @@ import tasks from './sample/tasks.json';
 import Tasks from './components/Tasks';
 import TaskForm from './components/TaskForm'
 import Posts from './components/Posts'
+import Datatable from './components/Datatable'
 
 
 class App extends Component {
@@ -56,6 +57,8 @@ class App extends Component {
           <Link to="/posts">Posts</Link>
           <br/><br/>
           <Link to="/tasks">Tasks</Link>
+          <br/><br/>
+          <Link to="/datatables">DataTables</Link>
 
           <Route path="/tasks" render={() => {
             return (
@@ -70,7 +73,8 @@ class App extends Component {
             )
           }}>
           </Route>
-          <Route path="/posts" component={Posts}/>   
+          <Route path="/posts" component={Posts}/> 
+          <Route path="/datatables" component={Datatable}/>  
         </Router>
     </div>
     )
